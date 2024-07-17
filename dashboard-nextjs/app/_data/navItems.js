@@ -1,44 +1,76 @@
 import {
+  Database,
+  HelpCircle,
   Home,
   LineChart,
   Package,
   Package2,
   Settings,
   ShoppingCart,
+  UserCircle,
   Users2,
 } from "lucide-react";
 
 const routes = [
   {
-    name: "Dashboard",
-    icon: Home,
-    href: "#", // Replace with actual route link
+    title: "Pages",
+    list: [
+      {
+        title: "Dashboard",
+        path: "/dashboard",
+        icon: LineChart,
+      },
+      {
+        title: "Users",
+        path: "/dashboard/users",
+        icon: Users2,
+      },
+      {
+        title: "Products",
+        path: "/dashboard/products",
+        icon: Database,
+      },
+      {
+        title: "Transactions",
+        path: "/dashboard/transactions",
+        icon: Package,
+      },
+    ],
   },
   {
-    name: "Orders",
-    icon: ShoppingCart,
-    href: "#", // Replace with actual route link
+    title: "Analytics",
+    list: [
+      {
+        title: "Revenue",
+        path: "/dashboard/revenue",
+        icon: Package2,
+      },
+      {
+        title: "Reports",
+        path: "/dashboard/reports",
+        icon: ShoppingCart,
+      },
+      {
+        title: "Teams",
+        path: "/dashboard/teams",
+        icon: UserCircle,
+      },
+    ],
   },
   {
-    name: "Products",
-    icon: Package,
-    href: "#", // Replace with actual route link
-  },
-  {
-    name: "Customers",
-    icon: Users2,
-    href: "#", // Replace with actual route link
-  },
-  {
-    name: "Analytics",
-    icon: LineChart,
-    href: "#", // Replace with actual route link
-  },
-  {
-    name: "Settings",
-    icon: Settings,
-    href: "#", // Replace with actual route link
+    title: "User",
+    list: [
+      {
+        title: "Settings",
+        path: "/dashboard/settings",
+        icon: Settings,
+      },
+      {
+        title: "Help",
+        path: "/dashboard/help",
+        icon: HelpCircle,
+      },
+    ],
   },
 ];
-
 export default routes;
